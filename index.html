@@ -65,32 +65,33 @@
     font-size: clamp(.98rem, 1.6vw, 1.12rem);
   }
 
-  /* Projects */
-  .project {
+  /* Projects: vertical (reel) cards side by side */
+  #work .wrap {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: clamp(20px, 4vw, 56px);
-    padding-block: clamp(24px, 4vw, 40px);
-    border-bottom: 1px solid var(--line);
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(14px, 2.5vw, 32px);
+    padding-block: clamp(20px, 3vw, 36px);
   }
-  .info { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }
-  .tags { font-size: .82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .project { display: flex; flex-direction: column; gap: 12px; }
+  .project .media { order: 1; }
+  .project .info { order: 2; }
+  .info { display: block; }
+  .tags { display: none; }
   .info h2 {
     font-weight: 500;
-    font-size: clamp(1.4rem, 2.6vw, 2.1rem);
-    line-height: 1.35;
-    margin-top: 6px;
+    font-size: clamp(.95rem, 1.6vw, 1.25rem);
+    line-height: 1.5;
   }
   .media {
     position: relative;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 9 / 16;
     background: #1c1b19;
     border-radius: 6px;
     overflow: hidden;
   }
   .media img, .media video {
     position: absolute; inset: 0;
-    width: 100%; height: 100%; object-fit: contain; display: block;
+    width: 100%; height: 100%; object-fit: cover; display: block;
   }
 
   /* Contact */
@@ -122,8 +123,7 @@
   }
 
   @media (max-width: 760px) {
-    .project { grid-template-columns: 1fr; }
-    .info { gap: 16px; }
+    #work .wrap { grid-template-columns: repeat(2, 1fr); }
     nav .hide-sm { display: none; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -176,11 +176,11 @@
         <div class="info">
           <div>
             <div class="tags"><span>ویدیو</span></div>
-            <h2>طراحی داخلی</h2>
+            <h2>دندان پزشکی</h2>
           </div>
         </div>
         <div class="media" role="button" tabindex="0" aria-label="نمایش تمام صفحه">
-          <video muted loop playsinline preload="none" data-src="interior.mp4.MOV" aria-label="طراحی داخلی"></video>
+          <video muted loop playsinline preload="none" data-src="interior.mp4.MOV" aria-label="دندان پزشکی"></video>
         </div>
       </article>
 
@@ -188,11 +188,11 @@
         <div class="info">
           <div>
             <div class="tags"><span>ویدیو</span></div>
-            <h2>پزشکی</h2>
+            <h2>مرکز تصویربرداری جام جم</h2>
           </div>
         </div>
         <div class="media" role="button" tabindex="0" aria-label="نمایش تمام صفحه">
-          <video muted loop playsinline preload="none" data-src="medical.mp4.MOV" aria-label="پزشکی"></video>
+          <video muted loop playsinline preload="none" data-src="medical.mp4.MOV" aria-label="مرکز تصویربرداری جام جم"></video>
         </div>
       </article>
 
@@ -200,11 +200,11 @@
         <div class="info">
           <div>
             <div class="tags"><span>ویدیو</span></div>
-            <h2>باشگاه ورزشی</h2>
+            <h2>تجهیزات پزشکی باباطب</h2>
           </div>
         </div>
         <div class="media" role="button" tabindex="0" aria-label="نمایش تمام صفحه">
-          <video muted loop playsinline preload="none" data-src="gym.mp4.MOV" aria-label="باشگاه ورزشی"></video>
+          <video muted loop playsinline preload="none" data-src="gym.mp4.MOV" aria-label="تجهیزات پزشکی باباطب"></video>
         </div>
       </article>
 
