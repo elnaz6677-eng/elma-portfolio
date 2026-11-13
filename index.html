@@ -1,50 +1,276 @@
-<!doctype html>
-<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ELMA — Creative Studio</title>
-header.wrap {
-height: 75px;
-justify-content: flex-start;
-}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نمونه کارها | نام شرکت</title>
+<meta name="description" content="نمونه کارهای تبلیغات و تولید محتوا">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fdfaf4;
+    --ink: #1c1b19;
+    --muted: #6f6b63;
+    --line: #1c1b19;
+    --soft: #e9e3d6;
+    --gutter: clamp(20px, 4vw, 56px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Vazirmatn", "Manrope", sans-serif;
+    font-weight: 400;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
-.top-filters {
-margin: 0;
-gap: 12px;
-}
+  .wrap { padding-inline: var(--gutter); max-width: 1500px; margin-inline: auto; }
 
-.top-filters .filter {
-border: none;
-background: transparent;
-font-size: 13px;
-padding: 8px 12px;
-}
+  /* Header */
+  header { border-bottom: 1px solid var(--line); }
+  .bar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding-block: 18px;
+  }
+  .brand { font-weight: 700; font-size: 1.05rem; }
+  nav { display: flex; gap: clamp(14px, 3vw, 32px); font-size: .92rem; align-items: center; }
+  nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
+  .btn-dark {
+    background: var(--ink); color: var(--paper);
+    padding: 6px 18px; border-radius: 4px;
+  }
+  .btn-dark:hover { text-decoration: none; opacity: .85; }
 
-.top-filters .filter:hover,
-.top-filters .filter.active {
-background: #171717;
-color: white;
-}<style>
-:root{--ink:#171717;--line:#e9e9e9;--lime:#c9f36b}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}header{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.logo{font:900 30px Arial;letter-spacing:-2px;direction:ltr}.logo i{display:inline-block;width:8px;height:8px;background:var(--lime);border-radius:50%;margin-left:5px}nav{display:flex;gap:26px;font-size:13px;color:#555}.hero{padding:90px 0 70px;display:flex;justify-content:space-between;align-items:end;gap:35px}.eyebrow{font:11px Arial;letter-spacing:2px;color:#888;direction:ltr}h1{font-size:clamp(44px,7vw,82px);line-height:1.2;margin:16px 0;letter-spacing:-3px}.hero p{max-width:520px;color:#666;font-size:14px}.note{max-width:250px;border-right:1px solid var(--line);padding-right:20px;color:#777;font-size:12px}.work{padding:25px 0 90px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.head h2{font-size:32px;margin:5px 0}.head p{font-size:12px;color:#888}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}.filter{border:1px solid var(--line);background:white;border-radius:30px;padding:9px 16px;cursor:pointer;font:12px Tahoma}.filter.active,.filter:hover{background:#171717;color:white}.list{display:flex;flex-direction:column}.project{display:grid;grid-template-columns:.72fr 1.28fr;gap:35px;align-items:center;padding:22px 0;border-top:1px solid var(--line);cursor:pointer}.project[hidden]{display:none}.copy h3{font-size:clamp(24px,3vw,37px);margin:12px 0 4px}.copy p{font-size:13px;color:#777}.index{font:12px Arial;color:#aaa;direction:ltr}.link{font-size:12px;border-bottom:1px solid;padding-bottom:4px}.cover{aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(125deg,#e8e9e3,#cbd2c9);position:relative;overflow:hidden}.cover b{font:800 clamp(38px,6vw,75px) Arial;letter-spacing:-5px;direction:ltr}.cover small{font:10px Arial;letter-spacing:2px}.cover label{position:absolute;bottom:14px;right:14px;background:white;padding:5px 12px;font-size:10px}.c2{background:linear-gradient(125deg,#e4e9e7,#c6d3ce)}.c3{background:linear-gradient(125deg,#eee8e4,#d9c9bf)}.c4{background:linear-gradient(125deg,#eee5e9,#d9c6cf)}.c5{background:linear-gradient(125deg,#e7e8e1,#c7cbbd)}.about{background:#f7f7f4;padding:75px 0}.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.about h2{font-size:clamp(30px,4vw,46px);line-height:1.4}.about p{font-size:14px;color:#666;line-height:2.2}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.services div{border-top:1px solid #ddd;padding-top:12px}.services b{display:block;font-size:13px}.services span{font-size:11px;color:#888}.contact{padding:85px 0}.box{background:#171717;color:white;padding:48px;display:flex;justify-content:space-between;align-items:end;gap:25px}.box h2{font-size:clamp(34px,5vw,58px);line-height:1.3;margin:10px 0}.box p{color:#aaa;font-size:13px}.box a{background:var(--lime);padding:10px 20px;border-radius:30px;color:#111;font-size:12px;white-space:nowrap}footer{border-top:1px solid var(--line);padding:23px 0;display:flex;justify-content:space-between;color:#888;font-size:11px}.modal{display:none;position:fixed;inset:0;background:#000d;z-index:5;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalin{background:white;padding:28px;width:min(850px,100%);position:relative}.modal button{position:absolute;left:12px;top:8px;border:0;background:none;font-size:28px;cursor:pointer}.modal p{color:#777;font-size:13px}@media(max-width:700px){.hero{display:block;padding:60px 0}.note{margin-top:25px}.project{grid-template-columns:1fr;gap:14px}.cover{order:1}.copy{order:2}.aboutgrid{grid-template-columns:1fr;gap:10px}.services{grid-template-columns:1fr}.box{display:block;padding:30px}.box a{display:inline-block;margin-top:15px}.head{display:block}nav{gap:14px;font-size:11px}}
-</style></head><body>
-<header class="wrap">
-<div class="filters top-filters">
-<button class="filter" data-filter="architecture">معماری</button>
-<button class="filter" data-filter="medical">پزشکی</button>
-<button class="filter" data-filter="dental">دندانپزشکی</button>
-<button class="filter" data-filter="beauty">سالن زیبایی</button>
-<button class="filter" data-filter="fitness">باشگاه ورزشی</button>
-</div>
+  /* Hero */
+  .hero { padding-block: clamp(40px, 8vw, 110px) clamp(32px, 6vw, 80px); border-bottom: 1px solid var(--line); }
+  .hero h1 {
+    direction: ltr; text-align: left;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 8vw, 5.6rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+  .hero p {
+    margin-top: clamp(20px, 3vw, 36px);
+    max-width: 38rem;
+    color: var(--muted);
+    font-size: clamp(.98rem, 1.6vw, 1.12rem);
+  }
+
+  /* Projects */
+  .project {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: clamp(20px, 4vw, 56px);
+    padding-block: clamp(24px, 4vw, 40px);
+    border-bottom: 1px solid var(--line);
+  }
+  .info { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; }
+  .tags { font-size: .82rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .info h2 {
+    font-weight: 500;
+    font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+    line-height: 1.35;
+    margin-top: 6px;
+  }
+  .view {
+    align-self: flex-start;
+    font: inherit; font-size: .85rem;
+    background: transparent; color: var(--ink);
+    border: 1px solid var(--ink); border-radius: 4px;
+    padding: 4px 16px; cursor: pointer;
+    transition: background .2s, color .2s;
+  }
+  .view:hover { background: var(--ink); color: var(--paper); }
+
+  .media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: var(--soft);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .media img, .media video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+
+  /* Contact */
+  .contact { padding-block: clamp(48px, 8vw, 110px); }
+  .contact h2 { font-weight: 500; font-size: clamp(1.6rem, 4vw, 3rem); line-height: 1.4; max-width: 26ch; }
+  .contact ul { list-style: none; margin-top: 28px; display: grid; gap: 6px; font-size: 1rem; }
+  .contact li span { color: var(--muted); margin-inline-end: 8px; }
+  .contact a { border-bottom: 1px solid var(--ink); }
+  footer { border-top: 1px solid var(--line); padding-block: 18px; font-size: .8rem; color: var(--muted); }
+
+  /* Viewer */
+  dialog {
+    border: 0; background: transparent; padding: 0;
+    width: min(92vw, 1100px); max-height: 90vh; margin: auto;
+  }
+  dialog::backdrop { background: rgba(28,27,25,.88); }
+  .viewer-body img, .viewer-body video {
+    width: 100%; max-height: 82vh; object-fit: contain; display: block; border-radius: 6px; background: #000;
+  }
+  .close {
+    display: block; margin: 0 0 10px auto;
+    font: inherit; font-size: .9rem; color: var(--paper);
+    background: transparent; border: 1px solid var(--paper);
+    border-radius: 4px; padding: 3px 16px; cursor: pointer;
+  }
+
+  @media (max-width: 760px) {
+    .project { grid-template-columns: 1fr; }
+    .info { gap: 16px; }
+    nav .hide-sm { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">نام شرکت</a>
+    <nav>
+      <a class="hide-sm" href="#work">نمونه کارها</a>
+      <a class="btn-dark" href="#contact">تماس با ما</a>
+    </nav>
+  </div>
 </header>
-<main><section class="wrap hero"><div><div class="eyebrow">INDEPENDENT CREATIVE STUDIO</div><h1>ایده‌ها را<br>قابل‌دیدن می‌کنیم.</h1><p>از استراتژی و سناریونویسی تا تولید محتوای تصویری؛ برای برندهایی که می‌خواهند متفاوت دیده شوند و هدفمند رشد کنند.</p></div><div class="note">ما فقط محتوا تولید نمی‌کنیم؛ مسیر ارتباط برند با مخاطب را از ایده تا اجرا طراحی می‌کنیم.</div></section>
-<section class="wrap work" id="work"><div class="head"><div><div class="eyebrow">SELECTED WORK / 01</div><h2>پروژه‌های ELMA</h2></div><p>انتخابی از تجربه‌ها و همکاری‌های ما</p></div>
-<article class="project" data-category="architecture" data-title="معماری و طراحی داخلی"><div class="copy"><span class="index">01 / CATEGORY</span><h3>معماری و طراحی داخلی</h3><p>روایت فضا، جزئیات و هویت بصری پروژه.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover"><div><b>ARCH</b><br><small>ARCHITECTURE</small></div><label>01 — معماری</label></div></article>
-<article class="project" data-category="medical" data-title="پزشکی"><div class="copy"><span class="index">02 / CATEGORY</span><h3>پزشکی</h3><p>محتوای دقیق و قابل‌اعتماد برای ارتباط بهتر با مخاطب.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover c2"><div><b>MED</b><br><small>MEDICAL</small></div><label>02 — پزشکی</label></div></article>
-<article class="project" data-category="dental" data-title="دندانپزشکی"><div class="copy"><span class="index">03 / CATEGORY</span><h3>دندانپزشکی</h3><p>نمایش تخصص، تجربه و کیفیت خدمات دندانپزشکی.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover c3"><div><b>DENT</b><br><small>DENTISTRY</small></div><label>03 — دندانپزشکی</label></div></article>
-<article class="project" data-category="beauty" data-title="سالن زیبایی"><div class="copy"><span class="index">04 / CATEGORY</span><h3>سالن زیبایی</h3><p>تصویرسازی ظریف و حرفه‌ای از خدمات و تجربه مشتری.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover c4"><div><b>BEAUTY</b><br><small>BEAUTY STUDIO</small></div><label>04 — زیبایی</label></div></article>
-<article class="project" data-category="fitness" data-title="باشگاه ورزشی"><div class="copy"><span class="index">05 / CATEGORY</span><h3>باشگاه ورزشی</h3><p>محتوای پرانرژی برای معرفی فضا، خدمات و سبک زندگی.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover c5"><div><b>FIT</b><br><small>FITNESS</small></div><label>05 — ورزشی</label></div></article>
-</div></section>
-<section class="about" id="about"><div class="wrap aboutgrid"><div><div class="eyebrow">ABOUT ELMA / 02</div><h2>خلاقیت، وقتی ارزشمند است که هدف داشته باشد.</h2></div><div><p>ELMA یک استودیوی خلاق برای ساخت ارتباط مؤثر میان برندها و مخاطبانشان است. ما پیش از روشن شدن دوربین، به ایده، پیام و مسیری فکر می‌کنیم که هر محتوا باید طی کند.</p><div class="services"><div><b>استراتژی و سناریو</b><span>ایده‌پردازی و طراحی مسیر محتوا</span></div><div><b>تولید محتوای تصویری</b><span>فیلم‌برداری، عکاسی و تدوین</span></div><div><b>حضور دیجیتال</b><span>طراحی ویترین آنلاین برند</span></div></div></div></div></section>
-<section class="wrap contact" id="contact"><div class="box"><div><div class="eyebrow" style="color:#aaa">HAVE A PROJECT IN MIND? / 03</div><h2>بیایید چیزی<br>ماندگار بسازیم.</h2><p>برای شروع یک همکاری خلاقانه با ما در ارتباط باشید.</p></div><a href="mailto:hello@elma.studio">شروع گفتگو ↗</a></div></section></main>
-<footer class="wrap"><a class="logo" href="#">ELMA<i></i></a><span>© 2026 ELMA Creative Studio</span><span>Made with intention.</span></footer>
-<div class="modal" id="modal"><div class="modalin"><button id="close">×</button><h2></h2><p>پروژه‌های این دسته پس از اضافه شدن فایل‌های واقعی در این بخش نمایش داده می‌شوند.</p></div></div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Our branding success stories.</h1>
+      <p>ما یک شرکت تبلیغات و تولید محتوا هستیم. اینجا مجموعه‌ای از ویدیوها و عکس‌هایی را می‌بینید که برای برندها ساخته‌ایم.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+
+      <!--
+        ====== راهنمای ویرایش ======
+        هر پروژه یک بلوک <article> است.
+        برای اضافه کردن پروژه جدید، یک بلوک کامل را کپی و زیر آخرین پروژه پیست کنید.
+        آدرس عکس: images/اسم-فایل.jpg
+        آدرس ویدیو: videos/اسم-فایل.mp4
+        data-type را "image" یا "video" بگذارید و data-src را برابر آدرس فایل بزنید.
+      -->
+
+      <article class="project">
+        <div class="info">
+          <div>
+            <div class="tags"><span>ویدیو</span><span>برندینگ</span></div>
+            <h2>نام پروژه اول</h2>
+          </div>
+          <button class="view" data-type="video" data-src="videos/project-1.mp4">مشاهده پروژه</button>
+        </div>
+        <div class="media">
+          <img src="images/project-1.jpg" alt="نام پروژه اول" loading="lazy" onerror="this.remove()">
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="info">
+          <div>
+            <div class="tags"><span>عکس</span><span>تبلیغات</span></div>
+            <h2>نام پروژه دوم</h2>
+          </div>
+          <button class="view" data-type="image" data-src="images/project-2.jpg">مشاهده پروژه</button>
+        </div>
+        <div class="media">
+          <img src="images/project-2.jpg" alt="نام پروژه دوم" loading="lazy" onerror="this.remove()">
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="info">
+          <div>
+            <div class="tags"><span>ویدیو</span><span>تولید محتوا</span></div>
+            <h2>نام پروژه سوم</h2>
+          </div>
+          <button class="view" data-type="video" data-src="videos/project-3.mp4">مشاهده پروژه</button>
+        </div>
+        <div class="media">
+          <img src="images/project-3.jpg" alt="نام پروژه سوم" loading="lazy" onerror="this.remove()">
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="info">
+          <div>
+            <div class="tags"><span>عکس</span><span>محتوای شبکه‌های اجتماعی</span></div>
+            <h2>نام پروژه چهارم</h2>
+          </div>
+          <button class="view" data-type="image" data-src="images/project-4.jpg">مشاهده پروژه</button>
+        </div>
+        <div class="media">
+          <img src="images/project-4.jpg" alt="نام پروژه چهارم" loading="lazy" onerror="this.remove()">
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>برای ساخت ویدیو و محتوای برند خودتان با ما تماس بگیرید.</h2>
+      <ul>
+        <li><span>تلفن</span><a href="tel:+989120000000" dir="ltr">0912 000 0000</a></li>
+        <li><span>اینستاگرام</span><a href="https://instagram.com/" dir="ltr">@your_company</a></li>
+        <li><span>ایمیل</span><a href="mailto:info@example.com" dir="ltr">info@example.com</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© نام شرکت</div>
+</footer>
+
+<dialog id="viewer" aria-label="نمایش پروژه">
+  <button class="close" id="closeBtn">بستن</button>
+  <div class="viewer-body" id="viewerBody"></div>
+</dialog>
+
 <script>
-const fs=document.querySelectorAll('.filter'),ps=document.querySelectorAll('.project'),m=document.getElementById('modal');fs.forEach(b=>b.onclick=()=>{fs.forEach(x=>x.classList.remove('active'));b.classList.add('active');ps.forEach(p=>p.hidden=b.dataset.filter!=='all'&&p.dataset.category!==b.dataset.filter)});ps.forEach(p=>p.onclick=()=>{m.querySelector('h2').textContent=p.dataset.title;m.classList.add('open')});document.getElementById('close').onclick=()=>m.classList.remove('open');m.onclick=e=>{if(e.target===m)m.classList.remove('open')};document.onkeydown=e=>{if(e.key==='Escape')m.classList.remove('open')};
-</script></body></html>
+  const dlg = document.getElementById('viewer');
+  const body = document.getElementById('viewerBody');
+
+  document.querySelectorAll('.view').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.dataset.type, src = btn.dataset.src;
+      body.innerHTML = '';
+      let el;
+      if (type === 'video') {
+        el = document.createElement('video');
+        el.src = src; el.controls = true; el.autoplay = true; el.playsInline = true;
+      } else {
+        el = document.createElement('img');
+        el.src = src; el.alt = '';
+      }
+      body.appendChild(el);
+      dlg.showModal();
+    });
+  });
+
+  function closeViewer() { dlg.close(); body.innerHTML = ''; }
+  document.getElementById('closeBtn').addEventListener('click', closeViewer);
+  dlg.addEventListener('click', e => { if (e.target === dlg) closeViewer(); });
+  dlg.addEventListener('close', () => { body.innerHTML = ''; });
+</script>
+</body>
+</html>
