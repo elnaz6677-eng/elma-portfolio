@@ -1,13 +1,40 @@
 <!doctype html>
 <html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ELMA — Creative Studio</title>
-<style>
+header.wrap {
+height: 75px;
+justify-content: flex-start;
+}
+
+.top-filters {
+margin: 0;
+gap: 12px;
+}
+
+.top-filters .filter {
+border: none;
+background: transparent;
+font-size: 13px;
+padding: 8px 12px;
+}
+
+.top-filters .filter:hover,
+.top-filters .filter.active {
+background: #171717;
+color: white;
+}<style>
 :root{--ink:#171717;--line:#e9e9e9;--lime:#c9f36b}*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}header{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.logo{font:900 30px Arial;letter-spacing:-2px;direction:ltr}.logo i{display:inline-block;width:8px;height:8px;background:var(--lime);border-radius:50%;margin-left:5px}nav{display:flex;gap:26px;font-size:13px;color:#555}.hero{padding:90px 0 70px;display:flex;justify-content:space-between;align-items:end;gap:35px}.eyebrow{font:11px Arial;letter-spacing:2px;color:#888;direction:ltr}h1{font-size:clamp(44px,7vw,82px);line-height:1.2;margin:16px 0;letter-spacing:-3px}.hero p{max-width:520px;color:#666;font-size:14px}.note{max-width:250px;border-right:1px solid var(--line);padding-right:20px;color:#777;font-size:12px}.work{padding:25px 0 90px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.head h2{font-size:32px;margin:5px 0}.head p{font-size:12px;color:#888}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}.filter{border:1px solid var(--line);background:white;border-radius:30px;padding:9px 16px;cursor:pointer;font:12px Tahoma}.filter.active,.filter:hover{background:#171717;color:white}.list{display:flex;flex-direction:column}.project{display:grid;grid-template-columns:.72fr 1.28fr;gap:35px;align-items:center;padding:22px 0;border-top:1px solid var(--line);cursor:pointer}.project[hidden]{display:none}.copy h3{font-size:clamp(24px,3vw,37px);margin:12px 0 4px}.copy p{font-size:13px;color:#777}.index{font:12px Arial;color:#aaa;direction:ltr}.link{font-size:12px;border-bottom:1px solid;padding-bottom:4px}.cover{aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(125deg,#e8e9e3,#cbd2c9);position:relative;overflow:hidden}.cover b{font:800 clamp(38px,6vw,75px) Arial;letter-spacing:-5px;direction:ltr}.cover small{font:10px Arial;letter-spacing:2px}.cover label{position:absolute;bottom:14px;right:14px;background:white;padding:5px 12px;font-size:10px}.c2{background:linear-gradient(125deg,#e4e9e7,#c6d3ce)}.c3{background:linear-gradient(125deg,#eee8e4,#d9c9bf)}.c4{background:linear-gradient(125deg,#eee5e9,#d9c6cf)}.c5{background:linear-gradient(125deg,#e7e8e1,#c7cbbd)}.about{background:#f7f7f4;padding:75px 0}.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.about h2{font-size:clamp(30px,4vw,46px);line-height:1.4}.about p{font-size:14px;color:#666;line-height:2.2}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.services div{border-top:1px solid #ddd;padding-top:12px}.services b{display:block;font-size:13px}.services span{font-size:11px;color:#888}.contact{padding:85px 0}.box{background:#171717;color:white;padding:48px;display:flex;justify-content:space-between;align-items:end;gap:25px}.box h2{font-size:clamp(34px,5vw,58px);line-height:1.3;margin:10px 0}.box p{color:#aaa;font-size:13px}.box a{background:var(--lime);padding:10px 20px;border-radius:30px;color:#111;font-size:12px;white-space:nowrap}footer{border-top:1px solid var(--line);padding:23px 0;display:flex;justify-content:space-between;color:#888;font-size:11px}.modal{display:none;position:fixed;inset:0;background:#000d;z-index:5;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modalin{background:white;padding:28px;width:min(850px,100%);position:relative}.modal button{position:absolute;left:12px;top:8px;border:0;background:none;font-size:28px;cursor:pointer}.modal p{color:#777;font-size:13px}@media(max-width:700px){.hero{display:block;padding:60px 0}.note{margin-top:25px}.project{grid-template-columns:1fr;gap:14px}.cover{order:1}.copy{order:2}.aboutgrid{grid-template-columns:1fr;gap:10px}.services{grid-template-columns:1fr}.box{display:block;padding:30px}.box a{display:inline-block;margin-top:15px}.head{display:block}nav{gap:14px;font-size:11px}}
 </style></head><body>
-<header class="wrap"><a class="logo" href="#">ELMA<i></i></a><nav><a href="#work">پروژه‌ها</a><a href="#about">درباره ما</a><a href="#contact">ارتباط</a></nav></header>
+<header class="wrap">
+<div class="filters top-filters">
+<button class="filter" data-filter="architecture">معماری</button>
+<button class="filter" data-filter="medical">پزشکی</button>
+<button class="filter" data-filter="dental">دندانپزشکی</button>
+<button class="filter" data-filter="beauty">سالن زیبایی</button>
+<button class="filter" data-filter="fitness">باشگاه ورزشی</button>
+</div>
+</header>
 <main><section class="wrap hero"><div><div class="eyebrow">INDEPENDENT CREATIVE STUDIO</div><h1>ایده‌ها را<br>قابل‌دیدن می‌کنیم.</h1><p>از استراتژی و سناریونویسی تا تولید محتوای تصویری؛ برای برندهایی که می‌خواهند متفاوت دیده شوند و هدفمند رشد کنند.</p></div><div class="note">ما فقط محتوا تولید نمی‌کنیم؛ مسیر ارتباط برند با مخاطب را از ایده تا اجرا طراحی می‌کنیم.</div></section>
 <section class="wrap work" id="work"><div class="head"><div><div class="eyebrow">SELECTED WORK / 01</div><h2>پروژه‌های ELMA</h2></div><p>انتخابی از تجربه‌ها و همکاری‌های ما</p></div>
-<div class="filters"><button class="filter active" data-filter="all">همه پروژه‌ها</button><button class="filter" data-filter="architecture">معماری</button><button class="filter" data-filter="medical">پزشکی</button><button class="filter" data-filter="dental">دندانپزشکی</button><button class="filter" data-filter="beauty">سالن زیبایی</button><button class="filter" data-filter="fitness">باشگاه ورزشی</button></div>
-<div class="list">
 <article class="project" data-category="architecture" data-title="معماری و طراحی داخلی"><div class="copy"><span class="index">01 / CATEGORY</span><h3>معماری و طراحی داخلی</h3><p>روایت فضا، جزئیات و هویت بصری پروژه.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover"><div><b>ARCH</b><br><small>ARCHITECTURE</small></div><label>01 — معماری</label></div></article>
 <article class="project" data-category="medical" data-title="پزشکی"><div class="copy"><span class="index">02 / CATEGORY</span><h3>پزشکی</h3><p>محتوای دقیق و قابل‌اعتماد برای ارتباط بهتر با مخاطب.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover c2"><div><b>MED</b><br><small>MEDICAL</small></div><label>02 — پزشکی</label></div></article>
 <article class="project" data-category="dental" data-title="دندانپزشکی"><div class="copy"><span class="index">03 / CATEGORY</span><h3>دندانپزشکی</h3><p>نمایش تخصص، تجربه و کیفیت خدمات دندانپزشکی.</p><span class="link">مشاهده پروژه‌ها ↙</span></div><div class="cover c3"><div><b>DENT</b><br><small>DENTISTRY</small></div><label>03 — دندانپزشکی</label></div></article>
