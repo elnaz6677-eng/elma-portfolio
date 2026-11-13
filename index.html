@@ -198,7 +198,7 @@
           </div>
         </div>
         <div class="media" role="button" tabindex="0" aria-label="نمایش تمام صفحه">
-          <video muted loop playsinline preload="none" data-src="vingo-video.MOV" aria-label="وینگو"></video>
+          <video muted loop playsinline preload="none" data-src="vingo-video.MOV" data-alt="vingo.mp4.MOV" aria-label="وینگو"></video>
         </div>
       </article>
 
@@ -271,14 +271,23 @@
     entries.forEach(e => {
       const v = e.target;
       if (e.isIntersecting) {
-        if (!v.src) v.src = v.dataset.src;
+        if (!v.getAttribute('src')) v.src = v.dataset.src;
         v.play().catch(() => {});
       } else {
         v.pause();
       }
     });
   }, { rootMargin: '200px' });
-  gridVideos.forEach(v => io.observe(v));
+  // If the first file name is not found, try the alternative name
+  gridVideos.forEach(v => {
+    v.addEventListener('error', () => {
+      if (v.dataset.alt && v.getAttribute('src') !== v.dataset.alt) {
+        v.src = v.dataset.alt;
+        v.play().catch(() => {});
+      }
+    });
+    io.observe(v);
+  });
 
   // Click: open fullscreen with sound
   const dlg = document.getElementById('viewer');
@@ -296,14 +305,15 @@
   function closeViewer() { if (dlg.open) dlg.close(); }
 
   document.querySelectorAll('.media').forEach(m => {
-    const src = m.querySelector('video').dataset.src;
-    m.addEventListener('click', () => openViewer(src));
-    m.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openViewer(src); } });
+    const vid = m.querySelector('video');
+    const getSrc = () => vid.getAttribute('src') || vid.dataset.src;
+    m.addEventListener('click', () => openViewer(getSrc()));
+    m.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openViewer(getSrc()); } });
   });
   document.getElementById('closeBtn').addEventListener('click', closeViewer);
   dlg.addEventListener('close', () => {
     body.innerHTML = '';
-    gridVideos.forEach(v => { if (v.src) v.play().catch(() => {}); });
+    gridVideos.forEach(v => { if (v.getAttribute('src')) v.play().catch(() => {}); });
   });
 </script>
 </body>
